@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #f0f8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.calendar-container {
+  width: 100%;
+  max-width: 1200px;
+  background-color: #f0f8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.calendar-main {
+  background-color: white;
+  border-radius: 10px;
+  margin: 0 20px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.calendar-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.calendar-table {
+  width: 75%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.calendar-table th {
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  font-weight: bold;
+}
+
+.calendar-table td {
+  border: 1px solid #f0f0f0;
+  padding: 10px;
+  text-align: center;
+  height: 80px;
+  vertical-align: top;
+  position: relative;
+}
+
+.date {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.lunar {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.prev-month,
+.next-month {
+  background-color: #f9f9f9;
+}
+
+.prev-month .date,
+.prev-month .lunar,
+.next-month .date,
+.next-month .lunar {
+  color: #aaa;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.holiday {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.image {
+  margin-bottom: 5px;
+}
+
+.events-list {
+  width: 25%;
+  padding-left: 20px;
+}
+
+.events-list h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.event {
+  margin-bottom: 15px;
+  padding: 8px 10px;
+  border-left: 4px solid;
+  font-size: 0.9rem;
+  box-shadow: 2px 2px 10px 1px #f1f1f1;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.event-date {
+  font-weight: bold;
+}
+
+.national-culture {
+  border-left-color: blue;
+}
+
+.water-policy {
+  border-left-color: blue;
+}
+
+.womens-day {
+  border-left-color: red;
+}
+
+.water-meteorological {
+  border-left-color: blue;
+}
+
+.tuberculosis {
+  border-left-color: blue;
+}
+
+.calendar-footer {
+  text-align: center;
+  padding: 15px;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 20px;
+}
+td:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+  .calendar-content {
+    flex-direction: column;
+  }
+
+  .calendar-table,
+  .events-list {
+    width: 100%;
+  }
+
+  .events-list {
+    margin-top: 20px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .calendar-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title-left,
+  .title-right {
+    margin: 5px 0;
+  }
+
+  .calendar-table td {
+    padding: 5px;
+    height: 60px;
+  }
+
+  .date {
+    font-size: 0.9rem;
+  }
+
+  .lunar {
+    font-size: 0.7rem;
+  }
+}
+
+/* Popup */
+body {
+  position: relative;
+}
+.popup {
+  display: none;
+  background-color: #4caf50;
+  position: absolute;
+  width: 60%;
+}
+.block {
+  display: block;
+}
