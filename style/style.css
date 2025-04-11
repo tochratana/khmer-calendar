@@ -163,6 +163,9 @@ body {
   color: #666;
   margin-top: 20px;
 }
+td {
+  width: 123px;
+}
 td:hover {
   background-color: #f1f1f1;
   cursor: pointer;
